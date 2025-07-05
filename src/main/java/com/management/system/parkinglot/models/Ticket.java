@@ -11,8 +11,10 @@ import java.time.LocalDateTime;
 @Getter
 @SuperBuilder
 public class Ticket extends BaseModel{
-    private Integer ticketNumber;
+    private Long ticketNumber;
     private Long vehicleId;
+    private Vehicle vehicle;
     private LocalDateTime entryTime;
     private Long spotId;
+    private Long entryGateId;
 }

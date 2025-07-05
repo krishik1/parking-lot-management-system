@@ -1,6 +1,7 @@
 package com.management.system.parkinglot.dto;
 
 import com.management.system.parkinglot.generators.ParkingFloorId;
+import com.management.system.parkinglot.generators.ParkingLotId;
 import com.management.system.parkinglot.generators.ParkingSpotId;
 import com.management.system.parkinglot.models.*;
 import lombok.Builder;
@@ -26,7 +27,7 @@ public class ParkingLotRequest {
         List<ParkingFloor> parkingFloors = Collections.nCopies(numberOfFloors,ParkingFloor.builder().spots(parkingSpots).paymentCounter(PaymentCounter.builder().build()).build());
         parkingFloors.forEach(parkingFloor -> parkingFloor.setId(ParkingFloorId.nextId()));
         System.out.println(parkingFloors.stream().map(floor ->floor.getSpots().size()));
-        return ParkingLot.builder().floors(parkingFloors).
+        return ParkingLot.builder().Id(ParkingLotId.nextId()).floors(parkingFloors).
                 entryGates(Collections.nCopies(noOfEntryGates, EntryGate.builder().build()))
                 .name(name)
                 .address(address)

@@ -21,6 +21,9 @@ public class ParkingLotRepository implements ParkingLotRepositoryI {
 
     @Override
     public ParkingLot getParkingLotById(Long id) {
-        return ParkingLot.builder().build();
+        return parkingLots.stream()
+                .filter(pl -> pl.getId() != null && pl.getId().equals(id))
+                .findFirst()
+                .orElseThrow(() -> new RuntimeException("ParkingLot with id " + id + " not found."));
     }
 }

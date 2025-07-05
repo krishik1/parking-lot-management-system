@@ -22,7 +22,7 @@ public class ParkingLotController {
     }
     @GetMapping("/{id}")
     public ParkingLot getParkingLot(@PathVariable("id") Long id) {
-        return ParkingLot.builder().Id(id).build();
+        return parkingLotService.retrieveParkingLotById(id);
     }
 
     private void validateRequest(ParkingLotRequest parkingLotRequest) {

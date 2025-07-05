@@ -4,4 +4,5 @@ import com.management.system.parkinglot.models.ParkingLot;
 
 public interface ParkingLotServiceI {
     ParkingLot creaParkingLot(ParkingLot parkingLot);
+    ParkingLot retrieveParkingLotById(Long id);
 }
