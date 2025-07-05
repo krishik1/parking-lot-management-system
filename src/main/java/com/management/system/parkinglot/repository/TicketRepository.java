@@ -14,4 +14,10 @@ public class TicketRepository implements TicketRepositoryI{
         tickets.add(ticket);
         return ticket;
     }
+
+    @Override
+    public Ticket getTicketByTicketNumber(Long number) {
+        return tickets.stream().filter(ticket->ticket.getTicketNumber().equals(number)).findFirst()
+                .orElseThrow(()-> new RuntimeException("Invalid Inpput."));
+    }
 }

@@ -38,4 +38,9 @@ public class TicketService implements TicketServiceI {
 
         return ticketRepository.save(ticket);
     }
+
+    @Override
+    public Ticket retrieveTicketById(Long id) {
+        return ticketRepository.getTicketByTicketNumber(id);
+    }
 }

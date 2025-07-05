@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/v1/parking-lot")
+@RequestMapping("parking-lot/v1/parking-lot")
 public class ParkingLotController {
 
     private final ParkingLotServiceI parkingLotService;

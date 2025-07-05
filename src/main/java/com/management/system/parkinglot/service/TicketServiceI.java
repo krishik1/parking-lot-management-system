@@ -5,4 +5,5 @@ import com.management.system.parkinglot.models.Ticket;
 
 public interface TicketServiceI {
     Ticket generateTicket(CreateTicketRequest request);
+    Ticket retrieveTicketById(Long id);
 }

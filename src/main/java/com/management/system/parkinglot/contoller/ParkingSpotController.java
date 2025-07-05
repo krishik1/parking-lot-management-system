@@ -3,7 +3,7 @@ package com.management.system.parkinglot.contoller;
 import com.management.system.parkinglot.models.ParkingSpot;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@RequestMapping("/v1/Parking-spot")
+@RequestMapping("parking-lot/v1/Parking-spot")
 public class ParkingSpotController {
 
     //create parking-spot
