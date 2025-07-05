@@ -1,0 +1,38 @@
+1.ParkingLot Creation :
+API: /parking-lot/v1/parking-lot
+Verb:POST
+Request :
+{
+    "name" : "CMR's Parking Lot",
+    "address" : "CMR Central, Maddila Palem, Vizag,Andhra Pradesh 530013, India",
+    "numberOfFloors" : 3,
+    "numberOfSpotsPerFloor":20,
+    "noOfEntryGates":2,
+    "noOfExitGates":2
+}
+
+2.ParkingLot Retrieval :
+API:http://localhost:8080/parking-lot/v1/parking-lot/0
+Verb:GET
+
+3.Ticket Generation :
+API: /parking-lot/v1/ticket
+Verb:POST
+Reuest :
+{
+  "parkingLotId": 0,
+  "vehicleNumber": "KA01AB1234",
+  "vehicleType": "MEDIUM",
+  "gateId": 2,
+  "issuerId": 42
+}
+
+4.Invoice Generation :
+API: /parking-lot/v1/invoice
+Verb:POST
+Request :
+{
+  "ticketNumber": 862025,
+  "exitTime": "2025-07-05T22:45:00"
+}
+
